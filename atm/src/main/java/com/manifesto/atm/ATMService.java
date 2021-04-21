@@ -8,15 +8,18 @@ public interface ATMService {
     /**
      * Retrieve account balance
      * @param accountNumber
+     * @param pin
      * @return
      */
-    public Integer getAccountBalance(int accountNumber);
+    public String getAccountBalance(String accountNumber,String pin);
 
     /**
      * Process withdrawal of fund from user account
      * @param accountNumber
+     * @param enteredPin
+     * @param withdrawAmount
      * @return
      */
-    public Integer withdrawal(int accountNumber,int originalPin, int enteredPin);
+    public String withdrawal(String accountNumber,String enteredPin,String withdrawAmount);
 
 }
